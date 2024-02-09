@@ -1,0 +1,5 @@
+containernetworking-plugins (100:1.6.0-1) UNRELEASED; urgency=medium
+
+  * https://github.com/containernetworking/plugins/releases/tag/v1.6.0
+
+ -- Wong Hoi Sing Edison <hswong3i@pantarei-design.com>  Tue, 15 Oct 2024 22:07:15 +0800

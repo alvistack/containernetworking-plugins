@@ -1,0 +1,3 @@
+containernetworking-plugins: initial-upload-closes-no-bugs
+containernetworking-plugins: no-copyright-file
+containernetworking-plugins: statically-linked-binary
