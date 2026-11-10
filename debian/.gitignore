@@ -1,0 +1,6 @@
+*.substvars
+*debhelper*
+.debhelper
+containernetworking-plugins
+files
+tmp

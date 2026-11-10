@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+
+SHELL := /bin/bash
+
+override_dh_auto_build:
+	mkdir -p bin
+	set -ex && \
+		export CGO_ENABLED=1 && \
+		./build_linux.sh -buildmode pie -v -ldflags "-s -w"
+
+override_dh_auto_install:
+	install -Dpm755 -d debian/tmp/opt/cni/bin
+	install -Dpm755 -d debian/tmp/usr/lib/systemd/system
+	install -Dpm755 -t debian/tmp/opt/cni/bin bin/*
+	install -Dpm644 -t debian/tmp/usr/lib/systemd/system plugins/ipam/dhcp/systemd/*
+
+override_dh_auto_test:
+
+override_dh_auto_clean:
+
+%:
+	dh $@
